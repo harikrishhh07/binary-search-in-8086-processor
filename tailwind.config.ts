@@ -80,10 +80,35 @@ export default {
             height: "0",
           },
         },
+        "data-pulse": {
+          "0%, 100%": { opacity: "0.5", transform: "scale(1)" },
+          "50%": { opacity: "1", transform: "scale(1.05)" },
+        },
+        "wave-flow": {
+          "0%": { transform: "translateX(-100%)" },
+          "100%": { transform: "translateX(100%)" },
+        },
+        "byte-flow": {
+          "0%": { transform: "translateX(0)", opacity: "0" },
+          "50%": { opacity: "1" },
+          "100%": { transform: "translateX(100%)", opacity: "0" },
+        },
+        "register-update": {
+          "0%": { backgroundColor: "hsl(180 100% 50% / 0)" },
+          "50%": { backgroundColor: "hsl(180 100% 50% / 0.3)" },
+          "100%": { backgroundColor: "hsl(180 100% 50% / 0)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "data-pulse": "data-pulse 2s ease-in-out infinite",
+        "wave-flow": "wave-flow 3s linear infinite",
+        "byte-flow": "byte-flow 2s ease-in-out infinite",
+        "register-update": "register-update 0.6s ease-out",
+      },
+      fontFamily: {
+        mono: ['JetBrains Mono', 'Fira Code', 'Consolas', 'monospace'],
       },
     },
   },
